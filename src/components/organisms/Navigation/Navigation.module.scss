@@ -1,0 +1,44 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixings' as *;
+
+.container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $white;
+  background-color: $grey;
+  padding: 30px 140px;
+  z-index: 3;
+  width: 100%;
+  @include breakpoints(mobile) {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    &__title {
+      font-size: 24px;
+      font-weight: 400;
+      @include breakpoints(mobile) {
+        font-size: 20px;
+      }
+    }
+    &__button {
+      border: none;
+      background-color: transparent;
+      display: none;
+      @include breakpoints(mobile) {
+        display: block;
+      }
+    }
+  }
+}

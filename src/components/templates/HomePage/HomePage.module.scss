@@ -1,0 +1,8 @@
+@use '/src/styles/mixings' as *;
+
+.container {
+  margin: 40px 140px;
+  @include breakpoints(mobile) {
+    margin: 10px 20px;
+  }
+}

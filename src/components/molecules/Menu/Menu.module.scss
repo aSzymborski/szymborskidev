@@ -1,0 +1,26 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixings' as *;
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  width: 100%;
+  @include breakpoints(mobile) {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+  }
+
+  &__item {
+    margin-left: 50px;
+    font-size: 20px;
+    @include breakpoints(mobile) {
+      margin: 35px 0;
+    }
+  }
+}
