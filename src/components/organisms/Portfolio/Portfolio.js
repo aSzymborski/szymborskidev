@@ -22,11 +22,6 @@ export const Portfolio = () => {
           src={dailycious}
           alt="dailycious"
         ></img>
-        <img
-          className={styles.container__wrapper__img}
-          src={dailycious}
-          alt="dailycious"
-        ></img>
       </div>
     </section>
   );
