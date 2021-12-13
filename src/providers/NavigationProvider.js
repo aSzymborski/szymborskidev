@@ -7,11 +7,16 @@ export const NavigationContext = React.createContext({
   widthSize: '',
   setWidthSize: () => {},
   scrollToTop: () => {},
+  checked: '',
+  index: '',
+  handleNavigationMenuItemIndex: () => {},
 });
 
 export const NavigationProvider = ({ children }) => {
   const [open, setOpen] = useState(false);
   const [widthSize, setWidthSize] = useState('');
+  const [checked, setChecked] = useState(false);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     //Add eventlistener
@@ -20,6 +25,7 @@ export const NavigationProvider = ({ children }) => {
 
   //Function to toggle open/close mobile menu
   const toggleMenu = () => {
+    setChecked(!checked);
     setOpen(!open);
   };
 
@@ -33,6 +39,11 @@ export const NavigationProvider = ({ children }) => {
     window.scrollTo(0, 0);
   };
 
+  //Handle to show navigation menu item index
+  const handleNavigationMenuItemIndex = (index) => {
+    setIndex(index);
+  };
+
   return (
     <NavigationContext.Provider
       value={{
@@ -42,6 +53,9 @@ export const NavigationProvider = ({ children }) => {
         widthSize,
         setWidthSize,
         scrollToTop,
+        checked,
+        index,
+        handleNavigationMenuItemIndex,
       }}
     >
       {children}

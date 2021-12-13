@@ -9,17 +9,29 @@ export const Navigation = () => {
     <>
       <section className={styles.container}>
         <div className={styles.container__menu}>
-          <Link to="/">
-            <h1 className={styles.container__menu__title}>SzymborskiDev</h1>
-          </Link>
-
-          <button
-            onClick={() => context.toggleMenu()}
-            className={styles.button}
+          <Link
+            onClick={() => {
+              context.setOpen(false);
+              context.handleNavigationMenuItemIndex(0);
+            }}
+            to="/"
           >
-            <span></span>
-            <span></span>
-          </button>
+            <h1
+              style={{ color: context.index === 0 ? '#f0860c' : '#ffffff' }}
+              className={styles.container__menu__title}
+            >
+              SzymborskiDev
+            </h1>
+          </Link>
+          <input
+            checked={context.checked}
+            onChange={() => context.toggleMenu()}
+            type="checkbox"
+            className={styles.toggler}
+          />
+          <div className={styles.button}>
+            <div></div>
+          </div>
         </div>
         {context.open || context.widthSize > 999 ? <Menu /> : null}
       </section>

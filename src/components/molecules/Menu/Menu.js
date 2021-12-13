@@ -7,17 +7,38 @@ export const Menu = () => {
   const context = useContext(NavigationContext);
   return (
     <ul className={styles.list}>
-      <li onClick={context.toggleMenu} className={styles.list__item}>
+      <li
+        onClick={() => {
+          context.toggleMenu();
+          context.handleNavigationMenuItemIndex(2);
+        }}
+        style={{ color: context.index === 2 ? '#f0860c' : '#ffffff' }}
+        className={styles.list__item}
+      >
         <Link to="/aboutme">
           <p>About me</p>
         </Link>
       </li>
 
-      <li onClick={context.toggleMenu} className={styles.list__item}>
+      <li
+        onClick={() => {
+          context.toggleMenu();
+          context.handleNavigationMenuItemIndex(3);
+        }}
+        style={{ color: context.index === 3 ? '#f0860c' : '#ffffff' }}
+        className={styles.list__item}
+      >
         <Link to="/portfolio">Portfolio</Link>
       </li>
 
-      <li onClick={context.toggleMenu} className={styles.list__item}>
+      <li
+        onClick={() => {
+          context.toggleMenu();
+          context.handleNavigationMenuItemIndex(4);
+        }}
+        style={{ color: context.index === 4 ? '#f0860c' : '#ffffff' }}
+        className={styles.list__item}
+      >
         <Link to="/contact">Contact</Link>
       </li>
 

@@ -1,8 +1,9 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixings' as *;
+@use '/src/styles/animations' as *;
 .container {
   position: absolute;
-  top: 0rem;
+  top: 5rem;
   left: 0;
   right: 0;
   display: flex;
@@ -11,9 +12,18 @@
   color: $white;
   height: 100vh;
   overflow-x: scroll;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 1.4s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
   &__title {
     font-size: 64px;
     padding: 10rem 0 10rem 10rem;
+    @include breakpoints(mobile) {
+      font-size: 47px;
+      padding: 1rem;
+    }
   }
 }
 .wrapper {
@@ -21,4 +31,8 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 0;
+  width: 100%;
+  @include breakpoints(mobile) {
+    padding-top: 7rem;
+  }
 }

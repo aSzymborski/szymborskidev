@@ -1,5 +1,6 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixings' as *;
+@use '/src/styles/animations' as *;
 .container {
   display: flex;
   flex-direction: column;
@@ -8,6 +9,15 @@
   color: $white;
   width: 35vw;
   height: 80vh;
+  padding-top: 15rem;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 1.4s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  @include breakpoints(mobile) {
+    width: 80vw;
+  }
   &__title {
     font-size: 64px;
   }

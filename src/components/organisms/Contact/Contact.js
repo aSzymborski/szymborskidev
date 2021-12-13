@@ -7,7 +7,6 @@ export const Contact = () => {
   const {
     register,
     handleSubmit,
-    // watch,
     formState: { errors },
   } = useForm();
 
@@ -16,12 +15,15 @@ export const Contact = () => {
   return (
     <section id="contact" className={styles.container}>
       <h3 className={styles.container__title}>Let's talk.</h3>
+
       <p className={styles.container__p}>
         Get in touch via the form below, or by emailing{' '}
         <span className={styles.container__span}>hello@szymborskidev.com</span>{' '}
       </p>
+
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         {errors.name && <span>This field is required</span>}
+
         <FormField
           register={register}
           label="Name"
@@ -29,6 +31,7 @@ export const Contact = () => {
           name="name"
         />
         {errors.email && <span>This field is required</span>}
+
         <FormField
           register={register}
           label="Email Address"
