@@ -12,6 +12,7 @@ export const Navigation = () => {
           <Link
             onClick={() => {
               context.setOpen(false);
+              context.checked(false);
               context.handleNavigationMenuItemIndex(0);
             }}
             to="/"
