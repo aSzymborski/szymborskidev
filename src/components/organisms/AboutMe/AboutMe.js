@@ -20,8 +20,7 @@ export const AboutMe = () => {
 
       <p className={styles.container__text}>
         Programming has become my passion for which I devote every free moment.
-        He is also interested in old motorization, and more precisely -
-        motorcycles.
+        I also interested in old motorization, and more precisely - motorcycles.
       </p>
 
       <p className={styles.container__text}>
