@@ -1,15 +1,18 @@
+import React from 'react';
 import { Navigation } from 'components/organisms/Navigation/Navigation';
 import { NavigationProvider } from 'providers/NavigationProvider';
-import React from 'react';
-import { HomePage } from '../HomePage/HomePage';
+import adanio from 'assets/me1.jpg';
 
-export const MainTemplate = () => {
+import styles from 'components/templates/MainTemplate/MainTemplate.module.scss';
+
+export const MainTemplate = ({ children }) => {
   return (
-    <>
+    <section className={styles.container}>
+      <img className={styles.img} src={adanio} alt="me" />
       <NavigationProvider>
         <Navigation />
+        {children}
       </NavigationProvider>
-      <HomePage />
-    </>
+    </section>
   );
 };

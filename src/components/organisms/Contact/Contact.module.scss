@@ -4,19 +4,32 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   color: $white;
-  padding: 20px 0;
+  width: 35vw;
+  height: 80vh;
   &__title {
-    font-size: 24px;
-    margin-bottom: 60px;
+    font-size: 64px;
   }
-  &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 14px 40px;
-    @include breakpoints(mobile) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 0px 0px;
-    }
+  &__p {
+    font-size: 18px;
+    padding-bottom: 1rem;
   }
+  &__span {
+    color: $orange;
+  }
+}
+.form {
+  width: 100%;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: $orange;
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(99, 99, 99, 0.3);
 }

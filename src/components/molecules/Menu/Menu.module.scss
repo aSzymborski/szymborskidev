@@ -17,10 +17,17 @@
   }
 
   &__item {
-    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 2.5rem;
     font-size: 20px;
+    font-weight: 300;
+    // width: 100%;
     @include breakpoints(mobile) {
       margin: 35px 0;
+      justify-content: center;
     }
   }
 }

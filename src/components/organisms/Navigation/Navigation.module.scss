@@ -2,7 +2,7 @@
 @use '/src/styles/mixings' as *;
 
 .container {
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -10,26 +10,30 @@
   align-items: center;
   justify-content: space-between;
   color: $white;
-  background-color: $grey;
-  padding: 30px 140px;
-  z-index: 3;
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 10rem;
+  z-index: 9999;
   @include breakpoints(mobile) {
+    background-color: black;
     display: flex;
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 1rem 2rem;
   }
   &__menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    @include breakpoints(mobile) {
+      width: 100%;
+    }
     &__title {
+      cursor: pointer;
       font-size: 24px;
-      font-weight: 400;
+      font-weight: 300;
       @include breakpoints(mobile) {
         font-size: 20px;
+        display: none;
       }
     }
     &__button {
@@ -40,5 +44,16 @@
         display: block;
       }
     }
+  }
+}
+
+.button {
+  border: none;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  display: none;
+  @include breakpoints(mobile) {
+    display: block;
   }
 }

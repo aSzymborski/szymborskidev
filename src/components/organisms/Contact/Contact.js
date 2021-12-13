@@ -1,24 +1,51 @@
 import React from 'react';
-import { IconField } from 'components/atoms/IconField/IconField';
-
-import mailicon from 'assets/mail.svg';
-import lnicon from 'assets/ln.svg';
-import instaicon from 'assets/instagram-logo.svg';
-
 import styles from 'components/organisms/Contact/Contact.module.scss';
+import { FormField } from 'components/atoms/FormField/FormField';
+import { TextareaField } from 'components/atoms/TextareaField/TextareaField';
+import { useForm } from 'react-hook-form';
 export const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    // watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => console.log(data);
+
   return (
     <section id="contact" className={styles.container}>
-      <h3 className={styles.container__title}>Contact</h3>
-      <div className={styles.container__wrapper}>
-        <IconField
-          img={mailicon}
-          alt="mailicon"
-          title="hello@szymborskidev.com"
+      <h3 className={styles.container__title}>Let's talk.</h3>
+      <p className={styles.container__p}>
+        Get in touch via the form below, or by emailing{' '}
+        <span className={styles.container__span}>hello@szymborskidev.com</span>{' '}
+      </p>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        {errors.name && <span>This field is required</span>}
+        <FormField
+          register={register}
+          label="Name"
+          placeholder="Enter your name"
+          name="name"
         />
-        <IconField img={lnicon} alt="lnicon" title="Adrian Szymborski" />
-        <IconField img={instaicon} alt="instagramicon" title="szymborski_dev" />
-      </div>
+        {errors.email && <span>This field is required</span>}
+        <FormField
+          register={register}
+          label="Email Address"
+          placeholder="Enter your email address"
+          name="email"
+        />
+        <TextareaField
+          label="Message :"
+          name="message"
+          register={register}
+          placeholder="Enter your message"
+        />
+
+        <button type="submit" className={styles.button}>
+          Submit
+        </button>
+      </form>
     </section>
   );
 };
