@@ -22,10 +22,11 @@
     padding: 10rem 0 10rem 10rem;
     @include breakpoints(mobile) {
       font-size: 47px;
-      padding: 1rem;
+      padding: 4rem 0 0 2rem;
     }
   }
 }
+
 .wrapper {
   list-style: none;
   display: grid;

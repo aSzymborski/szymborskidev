@@ -27,7 +27,6 @@ export const AboutMe = () => {
         Have an interesting project?
         <Link to="/contact">
           <span onClick={() => context.handleNavigationMenuItemIndex(4)}>
-            {' '}
             Let's talk.
           </span>
         </Link>
