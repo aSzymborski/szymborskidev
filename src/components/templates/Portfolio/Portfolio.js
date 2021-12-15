@@ -1,8 +1,7 @@
 import React from 'react';
-
-import styles from 'components/organisms/Portfolio/Portfolio.module.scss';
-// import { PortfolioItem } from 'components/molecules/PortfolioItem/PortfolioItem';
 import { SoonPortfolioItem } from 'components/molecules/SoonPortfolioItem/SoonPortfolioItem';
+
+import styles from 'components/templates/Portfolio/Portfolio.module.scss';
 export const Portfolio = () => {
   return (
     <section id="portfolio" className={styles.container}>
@@ -10,8 +9,6 @@ export const Portfolio = () => {
       <ul className={styles.wrapper}>
         <SoonPortfolioItem />
         <SoonPortfolioItem />
-        {/* <PortfolioItem />
-        <PortfolioItem /> */}
       </ul>
     </section>
   );

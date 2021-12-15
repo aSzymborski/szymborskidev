@@ -8,17 +8,14 @@
   align-items: flex-start;
   justify-content: center;
   padding-top: 15rem;
-  height: 80vh;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  // opacity: 0;
-  // animation-name: appear;
-  // animation-duration: 1.4s;
-  // animation-delay: 0.1s;
-  // animation-fill-mode: forwards;
   @include breakpoints(mobile) {
     justify-content: flex-start;
-    padding-top: 7rem;
+    padding-top: 10rem;
   }
+
   &__p {
     color: white;
     font-size: 30px;
@@ -33,7 +30,7 @@
   &__h1 {
     font-size: 86px;
     color: $white;
-    margin-bottom: 12px;
+    padding-bottom: 12px;
     line-height: 5rem;
     font-weight: 600;
     opacity: 0;

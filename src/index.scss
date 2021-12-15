@@ -35,10 +35,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @include breakpoints(mobile) {
-    // margin: 10px 20px;
-  }
 }
 
 code {

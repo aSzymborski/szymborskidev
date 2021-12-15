@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
-import { NavigationContext } from 'providers/NavigationProvider';
-import styles from 'components/templates/HomePage/HomePage.module.scss';
 import { Link } from 'react-router-dom';
+import { NavigationContext } from 'providers/NavigationProvider';
+
+import styles from 'components/templates/HomePage/HomePage.module.scss';
+
 export const HomePage = () => {
   const context = useContext(NavigationContext);
   return (
-    <section className={styles.container}>
+    <section id="home" className={styles.container}>
       <p className={styles.container__p}>Hi, I'm Adrian.</p>
       <h1 className={styles.container__h1}>
         Front-end <br /> developer.

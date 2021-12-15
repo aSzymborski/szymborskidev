@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
-import { NavigationContext } from 'providers/NavigationProvider';
-import styles from 'components/organisms/AboutMe/AboutMe.module.scss';
 import { Link } from 'react-router-dom';
+import { NavigationContext } from 'providers/NavigationProvider';
+
+import styles from 'components/templates/AboutMe/AboutMe.module.scss';
+
 export const AboutMe = () => {
   const context = useContext(NavigationContext);
   return (
-    <section id="aboutme" className={styles.container}>
+    <section className={styles.container}>
       <h3 className={styles.container__title}>A little bit about me.</h3>
       <p className={styles.container__text}>
         Creative and independent Front-End Developer with a few months of

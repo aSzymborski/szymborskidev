@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import { NavigationContext } from 'providers/NavigationProvider';
-import styles from 'components/organisms/Navigation/Navigation.module.scss';
-import { Menu } from 'components/molecules/Menu/Menu';
 import { Link } from 'react-router-dom';
+import { NavigationContext } from 'providers/NavigationProvider';
+import { Menu } from 'components/molecules/Menu/Menu';
+
+import styles from 'components/organisms/Navigation/Navigation.module.scss';
+
 export const Navigation = () => {
   const context = useContext(NavigationContext);
   return (

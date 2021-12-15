@@ -18,6 +18,9 @@
   @include breakpoints(mobile) {
     padding: 1rem 1rem;
   }
+  @include breakpoints(laptop) {
+    padding: 6rem 3rem;
+  }
 }
 .wrapper {
   display: flex;

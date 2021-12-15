@@ -1,7 +1,8 @@
 import React from 'react';
 
 import styles from 'components/atoms/TextareaField/TextareaField.module.scss';
-export const TextareaField = ({ label, placeholder, name, register }) => {
+
+export const TextareaField = ({ label, placeholder, name, type, value }) => {
   return (
     <div className={styles.container}>
       <label className={styles.container__label}>{label}</label>
@@ -9,7 +10,9 @@ export const TextareaField = ({ label, placeholder, name, register }) => {
         className={styles.container__textarea}
         palceholder={placeholder}
         name={name}
-        {...register(name)}
+        type={type}
+        required
+        value={value}
       />
     </div>
   );

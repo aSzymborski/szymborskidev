@@ -13,6 +13,15 @@
   background-color: rgba(0, 0, 0, 0.8);
   padding: 1rem 10rem;
   z-index: 9999;
+  @include breakpoints(mobile) {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
+  @include breakpoints(laptop) {
+    padding: 1rem 3rem;
+  }
   &__menu {
     display: flex;
     flex-direction: row;
@@ -29,12 +38,6 @@
         font-size: 20px;
       }
     }
-  }
-  @include breakpoints(mobile) {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1.8rem;
   }
 }
 

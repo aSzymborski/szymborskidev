@@ -19,27 +19,22 @@ export const NavigationProvider = ({ children }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    //Add eventlistener
     window.addEventListener('resize', handleResize());
   }, []);
 
-  //Function to toggle open/close mobile menu
   const toggleMenu = () => {
     setChecked(!checked);
     setOpen(!open);
   };
 
-  //Handle to call eventlistener resize
   const handleResize = () => {
     setWidthSize(window.innerWidth);
   };
 
-  //Handle to call scrollTop
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
 
-  //Handle to show navigation menu item index
   const handleNavigationMenuItemIndex = (index) => {
     setIndex(index);
   };
