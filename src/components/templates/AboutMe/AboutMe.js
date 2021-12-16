@@ -26,7 +26,7 @@ export const AboutMe = () => {
       </p>
 
       <p className={styles.container__text}>
-        Have an interesting project?
+        Have an interesting project? &nbsp;
         <Link to="/contact">
           <span onClick={() => context.handleNavigationMenuItemIndex(4)}>
             Let's talk.

@@ -3,8 +3,6 @@ import { FormField } from 'components/atoms/FormField/FormField';
 import { TextareaField } from 'components/atoms/TextareaField/TextareaField';
 
 import styles from 'components/templates/Contact/Contact.module.scss';
-import { Link, useLinkClickHandler } from 'react-router-dom';
-import { ThankYouPage } from '../ThankYouPage/ThankYouPage';
 
 export const Contact = () => {
   return (
@@ -13,7 +11,12 @@ export const Contact = () => {
 
       <p className={styles.container__p}>
         Get in touch via the form below, or by emailing{' '}
-        <span className={styles.container__span}>hello@szymborskidev.com</span>{' '}
+        <a
+          href="mailto:hello@szymborskidev.com"
+          className={styles.container__span}
+        >
+          hello@szymborskidev.com
+        </a>{' '}
       </p>
 
       <form
@@ -25,7 +28,7 @@ export const Contact = () => {
         <input
           type="hidden"
           name="_next"
-          value="https://www.szymborskidev.com"
+          value="https://www.szymborskidev.com/thanks.html"
         />
         <input type="hidden" name="_captcha" value="false" />
         <input
@@ -54,8 +57,9 @@ export const Contact = () => {
           placeholder="Enter your message"
           label="Message"
         />
+
         <button type="submit" className={styles.button}>
-          <Link to="/thankyou">Submit</Link>
+          Submit
         </button>
       </form>
     </section>

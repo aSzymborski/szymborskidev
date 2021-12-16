@@ -1,5 +1,6 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixings' as *;
+@use '/src/styles//animations' as *;
 
 .list {
   display: flex;
@@ -28,5 +29,6 @@
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
+    animation: openRight 0.4s forwards;
   }
 }

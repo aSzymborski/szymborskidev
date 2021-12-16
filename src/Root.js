@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-
 import { HomePage } from 'components/templates/HomePage/HomePage';
 import { MainTemplate } from 'components/templates/MainTemplate/MainTemplate';
 import { AboutMe } from 'components/templates/AboutMe/AboutMe';

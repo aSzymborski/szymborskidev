@@ -2,7 +2,14 @@ import React from 'react';
 
 import styles from 'components/atoms/FormField/FormField.module.scss';
 
-export const FormField = ({ name, label, placeholder, type, value }) => {
+export const FormField = ({
+  name,
+  label,
+  placeholder,
+  type,
+  value,
+  onChange,
+}) => {
   return (
     <div className={styles.container}>
       <label className={styles.label}>{label} :</label>
@@ -13,6 +20,7 @@ export const FormField = ({ name, label, placeholder, type, value }) => {
         name={name}
         required
         value={value}
+        onChange={onChange}
       />
     </div>
   );
