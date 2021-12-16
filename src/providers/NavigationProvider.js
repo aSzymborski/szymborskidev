@@ -3,25 +3,40 @@ import React, { useState, useEffect } from 'react';
 export const NavigationContext = React.createContext({
   open: '',
   setOpen: () => {},
-  innerWidth: '',
-  setInnerWidth: () => {},
   toggleMenu: () => {},
+  widthSize: '',
+  setWidthSize: () => {},
+  scrollToTop: () => {},
+  checked: '',
+  index: '',
+  handleNavigationMenuItemIndex: () => {},
 });
 
 export const NavigationProvider = ({ children }) => {
   const [open, setOpen] = useState(false);
-  const [innerWidth, setInnerWidth] = useState(false);
+  const [widthSize, setWidthSize] = useState('');
+  const [checked, setChecked] = useState(false);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const innerWidthValue = window.innerWidth;
-    if (innerWidthValue > 999) {
-      setInnerWidth(true);
-    }
+    window.addEventListener('resize', handleResize());
   }, []);
 
   const toggleMenu = () => {
+    setChecked(!checked);
     setOpen(!open);
-    console.log(open);
+  };
+
+  const handleResize = () => {
+    setWidthSize(window.innerWidth);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const handleNavigationMenuItemIndex = (index) => {
+    setIndex(index);
   };
 
   return (
@@ -30,8 +45,12 @@ export const NavigationProvider = ({ children }) => {
         open,
         setOpen,
         toggleMenu,
-        innerWidth,
-        setInnerWidth,
+        widthSize,
+        setWidthSize,
+        scrollToTop,
+        checked,
+        index,
+        handleNavigationMenuItemIndex,
       }}
     >
       {children}

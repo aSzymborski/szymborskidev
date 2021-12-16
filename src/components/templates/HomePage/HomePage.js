@@ -1,19 +1,26 @@
-import React from 'react';
-import { HomePageHeader } from 'components/organisms/HomePageHeader/HomePageHeader';
-import { AboutMe } from 'components/organisms/AboutMe/AboutMe';
-import { Portfolio } from 'components/organisms/Portfolio/Portfolio';
-import { Contact } from 'components/organisms/Contact/Contact';
-import { HomePageHeaderProvider } from 'providers/HomePageHeaderProvider';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { NavigationContext } from 'providers/NavigationProvider';
+
 import styles from 'components/templates/HomePage/HomePage.module.scss';
+
 export const HomePage = () => {
+  const context = useContext(NavigationContext);
   return (
-    <section id="homepage" className={styles.container}>
-      <HomePageHeaderProvider>
-        <HomePageHeader />
-      </HomePageHeaderProvider>
-      <AboutMe />
-      <Portfolio />
-      <Contact />
+    <section id="home" className={styles.container}>
+      <p className={styles.container__p}>Hi, I'm Adrian.</p>
+      <h1 className={styles.container__h1}>
+        Front-end <br /> developer.
+      </h1>
+      <div className={styles.container__fillDiv}></div>
+      <Link to="/aboutme">
+        <p
+          onClick={() => context.handleNavigationMenuItemIndex(2)}
+          className={styles.container__learnMore}
+        >
+          Learn more
+        </p>
+      </Link>
     </section>
   );
 };

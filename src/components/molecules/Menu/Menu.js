@@ -1,30 +1,56 @@
 import React, { useContext } from 'react';
 import { NavigationContext } from 'providers/NavigationProvider';
 import styles from 'components/molecules/Menu/Menu.module.scss';
+import { Link } from 'react-router-dom';
 
 export const Menu = () => {
   const context = useContext(NavigationContext);
   return (
     <ul className={styles.list}>
-      <a href="#aboutme">
-        <li onClick={context.toggleMenu} className={styles.list__item}>
-          ABOUT ME
-        </li>
-      </a>
-      <a href="#mywork">
-        <li onClick={context.toggleMenu} className={styles.list__item}>
-          PORTFOLIO
-        </li>
-      </a>
-      <a href="#contact">
-        <li onClick={context.toggleMenu} className={styles.list__item}>
-          CONTACT
-        </li>
-      </a>
+      <li
+        onClick={() => {
+          context.toggleMenu();
+          context.handleNavigationMenuItemIndex(2);
+        }}
+        style={{ color: context.index === 2 ? '#f0860c' : '#ffffff' }}
+        className={styles.list__item}
+      >
+        <Link to="/aboutme">
+          <p>About me</p>
+        </Link>
+      </li>
 
-      <a href="https://github.com/aSzymborski" target="_blank" rel="noreferrer">
-        <li className={styles.list__item}>GITHUB</li>
-      </a>
+      <li
+        onClick={() => {
+          context.toggleMenu();
+          context.handleNavigationMenuItemIndex(3);
+        }}
+        style={{ color: context.index === 3 ? '#f0860c' : '#ffffff' }}
+        className={styles.list__item}
+      >
+        <Link to="/portfolio">Portfolio</Link>
+      </li>
+
+      <li
+        onClick={() => {
+          context.toggleMenu();
+          context.handleNavigationMenuItemIndex(4);
+        }}
+        style={{ color: context.index === 4 ? '#f0860c' : '#ffffff' }}
+        className={styles.list__item}
+      >
+        <Link to="/contact">Contact</Link>
+      </li>
+
+      <li className={styles.list__item}>
+        <a
+          href="https://github.com/aSzymborski"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+      </li>
     </ul>
   );
 };
