@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigation } from 'components/organisms/Navigation/Navigation';
 import { NavigationProvider } from 'providers/NavigationProvider';
 
-import adanio from 'assets/me1.jpg';
+import adanio from 'assets/Szymbor-1.png';
 import styles from 'components/templates/MainTemplate/MainTemplate.module.scss';
 
 export const MainTemplate = ({ children }) => {
