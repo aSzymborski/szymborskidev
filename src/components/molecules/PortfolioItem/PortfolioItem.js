@@ -10,8 +10,9 @@ export const PortfolioItem = () => {
           <p className={styles.box__p}>Technology stack: React, Scss, NodeJS</p>
           <a
             className={styles.box__check}
-            href="www.dailycious.pl"
+            href="https://www.dailycious.pl"
             target="_blank"
+            rel="noreferrer"
           >
             Check this projekt
           </a>
