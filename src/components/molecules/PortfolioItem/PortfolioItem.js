@@ -7,10 +7,14 @@ export const PortfolioItem = () => {
       <div className={styles.wrapper}>
         <div className={styles.box}>
           <h1 className={styles.box__h1}>Dailycious</h1>
-          <p className={styles.box__p}>
-            Technology stack: React, Directus CMS{' '}
-          </p>
-          <p className={styles.box__check}>Check this project </p>
+          <p className={styles.box__p}>Technology stack: React, Scss, NodeJS</p>
+          <a
+            className={styles.box__check}
+            href="www.dailycious.pl"
+            target="_blank"
+          >
+            Check this projekt
+          </a>
         </div>
         <img
           className={styles.wrapper__img}
