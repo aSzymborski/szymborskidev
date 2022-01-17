@@ -1,5 +1,7 @@
 import React from 'react';
+
 import dailycious from 'assets/dailycious.png';
+
 import styles from 'components/molecules/PortfolioItem/PortfolioItem.module.scss';
 export const PortfolioItem = () => {
   return (

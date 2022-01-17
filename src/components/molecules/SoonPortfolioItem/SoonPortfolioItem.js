@@ -1,6 +1,8 @@
 import React from 'react';
-import styles from 'components/molecules/SoonPortfolioItem/SoonPortfolioItem.module.scss';
+
 import soon from 'assets/soon.png';
+
+import styles from 'components/molecules/SoonPortfolioItem/SoonPortfolioItem.module.scss';
 export const SoonPortfolioItem = () => {
   return (
     <li className={styles.container}>
@@ -12,7 +14,7 @@ export const SoonPortfolioItem = () => {
           <p className={styles.box__p}>Technology stack: React</p>
           <p className={styles.box__check}>Check this project </p>
         </div>
-        <img className={styles.wrapper__img} src={soon} alt="dailycious"></img>
+        <img className={styles.wrapper__img} src={soon} alt="soon"></img>
       </div>
     </li>
   );

@@ -9,7 +9,6 @@ export const Portfolio = () => {
       <h3 className={styles.container__title}>Portfolio.</h3>
       <ul className={styles.wrapper}>
         <PortfolioItem />
-        {/* <SoonPortfolioItem /> */}
         <SoonPortfolioItem />
       </ul>
     </section>

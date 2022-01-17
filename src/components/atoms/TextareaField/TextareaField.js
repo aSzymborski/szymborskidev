@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from 'components/atoms/TextareaField/TextareaField.module.scss';
-
 export const TextareaField = ({
   label,
   placeholder,

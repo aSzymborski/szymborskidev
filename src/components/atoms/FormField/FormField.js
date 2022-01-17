@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from 'components/atoms/FormField/FormField.module.scss';
-
 export const FormField = ({
   name,
   label,

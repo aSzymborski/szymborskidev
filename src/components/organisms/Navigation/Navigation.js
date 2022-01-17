@@ -4,7 +4,6 @@ import { NavigationContext } from 'providers/NavigationProvider';
 import { Menu } from 'components/molecules/Menu/Menu';
 
 import styles from 'components/organisms/Navigation/Navigation.module.scss';
-
 export const Navigation = () => {
   const context = useContext(NavigationContext);
   return (
@@ -12,8 +11,9 @@ export const Navigation = () => {
       <div className={styles.container__menu}>
         <Link
           onClick={() => {
-            context.setOpen(false);
-            context.checked(false);
+            if (context.size[0] < 999 && context.open === true) {
+              context.toggleMenu();
+            }
             context.handleNavigationMenuItemIndex(0);
           }}
           to="/"
@@ -36,7 +36,7 @@ export const Navigation = () => {
           <div></div>
         </div>
       </div>
-      {context.open || context.widthSize > 999 ? <Menu /> : null}
+      {context.open || context.size[0] > 999 ? <Menu /> : null}
     </section>
   );
 };

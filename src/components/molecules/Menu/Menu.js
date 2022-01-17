@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
 import { NavigationContext } from 'providers/NavigationProvider';
-import styles from 'components/molecules/Menu/Menu.module.scss';
 import { Link } from 'react-router-dom';
 
+import styles from 'components/molecules/Menu/Menu.module.scss';
 export const Menu = () => {
   const context = useContext(NavigationContext);
   return (
     <ul className={styles.list}>
       <li
         onClick={() => {
-          context.toggleMenu();
+          if (context.size[0] <= 999) {
+            context.toggleMenu();
+          }
           context.handleNavigationMenuItemIndex(2);
         }}
         style={{ color: context.index === 2 ? '#f0860c' : '#ffffff' }}
@@ -22,7 +24,9 @@ export const Menu = () => {
 
       <li
         onClick={() => {
-          context.toggleMenu();
+          if (context.size[0] <= 999) {
+            context.toggleMenu();
+          }
           context.handleNavigationMenuItemIndex(3);
         }}
         style={{ color: context.index === 3 ? '#f0860c' : '#ffffff' }}
@@ -33,7 +37,9 @@ export const Menu = () => {
 
       <li
         onClick={() => {
-          context.toggleMenu();
+          if (context.size[0] <= 999) {
+            context.toggleMenu();
+          }
           context.handleNavigationMenuItemIndex(4);
         }}
         style={{ color: context.index === 4 ? '#f0860c' : '#ffffff' }}
