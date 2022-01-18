@@ -1,3 +1,7 @@
+# Live
+
+`www.szymborskidev.com`
+
 # How to run locally
 
 `npm start`
