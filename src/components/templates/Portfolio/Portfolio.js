@@ -24,7 +24,7 @@ export const Portfolio = () => {
         />
         <PortfolioItem
           title="My Garage"
-          techStack="React, Scss, Firebase, DatoCMS, NodeJS"
+          techStack="React, TypeScript, Scss, Firebase, DatoCMS, NodeJS"
           link="http://www.mygarage.szymborskidev.com"
           image={mygarage}
           background="linear-gradient(
