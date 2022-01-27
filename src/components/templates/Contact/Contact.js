@@ -3,10 +3,15 @@ import { FormField } from 'components/atoms/FormField/FormField';
 import { TextareaField } from 'components/atoms/TextareaField/TextareaField';
 
 import styles from 'components/templates/Contact/Contact.module.scss';
+import Helmet from 'react-helmet';
 
 export const Contact = () => {
   return (
     <section id="contact" className={styles.container}>
+      <Helmet>
+        <title>SzymborskiDev | Contact</title>
+        <meta name="description" content="Contact" />
+      </Helmet>
       <h3 className={styles.container__title}>Let's talk.</h3>
 
       <p className={styles.container__p}>

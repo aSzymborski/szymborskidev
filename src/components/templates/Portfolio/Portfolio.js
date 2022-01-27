@@ -4,9 +4,14 @@ import { PortfolioItem } from 'components/molecules/PortfolioItem/PortfolioItem'
 import mygarage from 'assets/mygarage.png';
 import dailycious from 'assets/dailycious.png';
 import styles from 'components/templates/Portfolio/Portfolio.module.scss';
+import Helmet from 'react-helmet';
 export const Portfolio = () => {
   return (
     <section id="portfolio" className={styles.container}>
+      <Helmet>
+        <title>SzymborskiDev | Portfolio</title>
+        <meta name="description" content="Portfolio" />
+      </Helmet>
       <h3 className={styles.container__title}>Portfolio.</h3>
       <ul className={styles.wrapper}>
         <PortfolioItem

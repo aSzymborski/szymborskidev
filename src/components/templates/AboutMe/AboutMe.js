@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom';
 import { NavigationContext } from 'providers/NavigationProvider';
 
 import styles from 'components/templates/AboutMe/AboutMe.module.scss';
+import { Helmet } from 'react-helmet';
 
 export const AboutMe = () => {
   const context = useContext(NavigationContext);
   return (
     <section className={styles.container}>
+      <Helmet>
+        <title>SzymborskiDev | About me</title>
+        <meta name="description" content="About Me" />
+      </Helmet>
       <h3 className={styles.container__title}>A little bit about me.</h3>
       <p className={styles.container__text}>
         Creative and independent Front-End Developer with a few months of
