@@ -20,7 +20,7 @@ export const PortfolioItem = ({
             target="_blank"
             rel="noreferrer"
           >
-            Check this projekt
+            Check this project
           </a>
         </div>
         <img className={styles.wrapper__img} src={image} alt="project"></img>
