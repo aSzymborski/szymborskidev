@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { NavigationContext } from 'providers/NavigationProvider';
+import { MainContext } from 'providers/MainProvider';
 import { Menu } from 'components/molecules/Menu/Menu';
 
 import styles from 'components/organisms/Navigation/Navigation.module.scss';
 export const Navigation = () => {
-  const context = useContext(NavigationContext);
+  const context = useContext(MainContext);
   return (
     <section className={styles.container}>
       <div className={styles.container__menu}>

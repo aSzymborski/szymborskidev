@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { NavigationContext } from 'providers/NavigationProvider';
+import { MainContext } from 'providers/MainProvider';
 
 import styles from 'components/templates/HomePage/HomePage.module.scss';
 
 export const HomePage = () => {
-  const context = useContext(NavigationContext);
+  const context = useContext(MainContext);
   return (
     <section id="home" className={styles.container}>
       <p className={styles.container__p}>Hi, I'm Adrian.</p>

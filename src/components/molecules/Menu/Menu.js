@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { NavigationContext } from 'providers/NavigationProvider';
+import { MainContext } from 'providers/MainProvider';
 import { Link } from 'react-router-dom';
 
 import styles from 'components/molecules/Menu/Menu.module.scss';
 export const Menu = () => {
-  const context = useContext(NavigationContext);
+  const context = useContext(MainContext);
   return (
     <ul className={styles.list}>
       <li
