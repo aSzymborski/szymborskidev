@@ -57,6 +57,15 @@ export const Menu = () => {
           Github
         </a>
       </li>
+      <li className={styles.list__item}>
+        <a
+          href="https://pl.linkedin.com/in/adrian-szymborski-116366149"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Linkedin
+        </a>
+      </li>
     </ul>
   );
 };

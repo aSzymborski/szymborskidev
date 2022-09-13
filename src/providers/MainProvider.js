@@ -1,5 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
 export const MainContext = React.createContext({
   open: '',
@@ -23,6 +24,17 @@ export const MainProvider = ({ children }) => {
   const [size, setSize] = useState(0);
   const [aboutMe, setAboutMe] = useState([]);
   const [portfolioItems, setPortfolioItems] = useState([]);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/aboutme') {
+      setIndex(2);
+    } else if (location.pathname === '/portfolio') {
+      setIndex(3);
+    } else if (location.pathname === '/contact') {
+      setIndex(4);
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     getData();
