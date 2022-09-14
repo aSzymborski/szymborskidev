@@ -38,8 +38,7 @@
 .img {
   max-width: 100%;
   max-height: 100%;
-  filter: drop-shadow(0 0 0.75rem black);
-  filter: grayscale(100%);
+  filter: grayscale(70%);
   @include breakpoints(mobile) {
     max-width: 100%;
     max-height: 100%;

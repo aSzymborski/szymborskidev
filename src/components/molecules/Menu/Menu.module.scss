@@ -16,12 +16,17 @@
     margin-left: 2.5rem;
     font-size: 16px;
     font-weight: 300;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    &:hover {
+      color: $orange !important;
+      transition: all 0.5s ease-in-out;
+    }
     @include breakpoints(mobile) {
       margin: 35px 0;
       justify-content: center;
     }
   }
-
   @include breakpoints(mobile) {
     margin-top: 30px;
     display: flex;

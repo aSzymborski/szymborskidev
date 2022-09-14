@@ -15,7 +15,6 @@
   z-index: 9999;
   @include breakpoints(mobile) {
     background-color: black;
-
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
@@ -32,9 +31,15 @@
       width: 100%;
     }
     &__title {
+      position: relative;
       cursor: pointer;
       font-size: 24px;
       font-weight: 300;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        color: $orange !important;
+        transition: all 0.5s ease-in-out;
+      }
       @include breakpoints(mobile) {
         font-size: 20px;
       }
