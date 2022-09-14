@@ -11,7 +11,7 @@ export const FormField = ({
 }) => {
   return (
     <div className={styles.container}>
-      <label className={styles.label}>{label} :</label>
+      <label className={styles.label}>{label}</label>
       <input
         type={type}
         className={styles.input}
